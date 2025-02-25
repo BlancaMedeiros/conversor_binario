@@ -6,10 +6,11 @@ print("Opção escolhida: ", OpcaoEscolhida)
 
 TextoUsuario = input('degite o texto a ser convertido: ')
 
-Textoconvertido = '' 
-
-for letra in TextoUsuario:
-    Letra_ASCII = ord(letra)
-    Letra_binário = bin(Letra_ASCII)[2:]
-    Textoconvertido = Textoconvertido + Letra_binário
-print("Resultado da conversão: ", Textoconvertido)
+def ConverterTextoParaBinario(texto):
+    Textoconvertido = '' 
+    for letra in texto:
+        Letra_ASCII = ord(letra)
+        Letra_binário = bin(Letra_ASCII)[2:]
+        Textoconvertido = Textoconvertido + Letra_binário
+    return Textoconvertido
+print("Resultado da conversão: ", ConverterTextoParaBinario(TextoUsuario))
