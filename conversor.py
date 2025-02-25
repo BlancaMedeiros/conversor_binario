@@ -10,5 +10,5 @@ print(TextoUsuario)
 Textoconvertido = '' 
 
 for letra in TextoUsuario:
-    print(letra)
-
+    Textoconvertido = Textoconvertido + letra
+    print(letra, Textoconvertido)
