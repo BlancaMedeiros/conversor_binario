@@ -5,10 +5,11 @@ OpcaoEscolhida = input("Digite a opção desejada: ")
 print("Opção escolhida: ", OpcaoEscolhida)
 
 TextoUsuario = input('degite o texto a ser convertido: ')
-print(TextoUsuario)
 
 Textoconvertido = '' 
 
 for letra in TextoUsuario:
-    Textoconvertido = Textoconvertido + letra
-    print(letra, Textoconvertido)
+    Letra_ASCII = ord(letra)
+    Letra_binário = bin(Letra_ASCII)[2:]
+    Textoconvertido = Textoconvertido + Letra_binário
+print("Resultado da conversão: ", Textoconvertido)
