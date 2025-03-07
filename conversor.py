@@ -16,18 +16,22 @@ def ConverterBinarioParaTexto(TextoBinario):
         Textoconvertido = Textoconvertido + letra
     return Textoconvertido
 
+while True:
+    print('OPÇÕES')
+    print('1 = converter texto para binário')
+    print('2 = converter binário para texto')
+    print('0 = sair do programa')
 
-print('OPÇÕES')
-print('1 = converter texto para binário')
-print('2 = converter binário para texto')
-
-OpcaoEscolhida = input("Digite a opção desejada: ")
-print("Opção escolhida: ", OpcaoEscolhida)
-if OpcaoEscolhida == '1': 
-    TextoUsuario = input('degite o texto a ser convertido: ')
-    print("Resultado da conversão: ", ConverterTextoParaBinario(TextoUsuario))
-elif OpcaoEscolhida == '2':
-    TextoUsuario = input('degite o texto a ser convertido: ')
-    print("Resultado da conversão: ", ConverterBinarioParaTexto(TextoUsuario))
-else:
-    print('Essa opção não existe')
+    OpcaoEscolhida = input("Digite a opção desejada: ")
+    print("Opção escolhida: ", OpcaoEscolhida)
+    if OpcaoEscolhida == '1': 
+        TextoUsuario = input('degite o texto a ser convertido: ')
+        print("Resultado da conversão: ", ConverterTextoParaBinario(TextoUsuario))
+    elif OpcaoEscolhida == '2':
+        TextoUsuario = input('degite o texto a ser convertido: ')
+        print("Resultado da conversão: ", ConverterBinarioParaTexto(TextoUsuario))
+    elif OpcaoEscolhida == '0':
+        print('Saindo do programa')
+        break 
+    else:
+        print('Essa opção não existe')
