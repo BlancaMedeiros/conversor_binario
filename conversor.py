@@ -3,9 +3,8 @@ def ConverterTextoParaBinario(texto):
     for letra in texto:
         Letra_ASCII = ord(letra)
         Letra_binário = bin(Letra_ASCII)[2:]
-        Textoconvertido = Textoconvertido + Letra_binário
+        Textoconvertido = Textoconvertido + Letra_binário.zfill(7)
     return Textoconvertido
-
 def ConverterBinarioParaTexto(TextoBinario):
     Textoconvertido = '' 
     quantidadeLetra = len(TextoBinario)
@@ -29,7 +28,7 @@ while True:
         print("Resultado da conversão: ", ConverterTextoParaBinario(TextoUsuario))
     elif OpcaoEscolhida == '2':
         TextoUsuario = input('degite o texto a ser convertido: ')
-        print("Resultado da conversão: ", ConverterBinarioParaTexto(TextoUsuario))
+        print("Resultado da conversão: '"+ConverterBinarioParaTexto(TextoUsuario)+"'")
     elif OpcaoEscolhida == '0':
         print('Saindo do programa')
         break 
